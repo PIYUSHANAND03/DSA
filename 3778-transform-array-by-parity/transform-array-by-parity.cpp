@@ -8,8 +8,8 @@ public:
             else{
                 nums[i]=1;
             }
-            sort(nums.begin(),nums.end());
         }
+        sort(nums.begin(),nums.end());
         return nums;
     }
 };
