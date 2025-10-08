@@ -1,8 +1,7 @@
 class Solution {
 public:
     vector<int> transformArray(vector<int>& nums) {
-        int n=nums.size();
-        for(int i=0;i<n;i++){
+        for(int i=0;i<nums.size();i++){
             if(nums[i]%2==0){
                 nums[i]=0;
             }
