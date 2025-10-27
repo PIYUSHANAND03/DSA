@@ -6,7 +6,7 @@ public:
             for(int j=0;j<friends.size();j++){
                 if(order[i]==friends[j]){
                 ans.push_back(order[i]);
-            }
+                 }
             }
         }
         return ans;
