@@ -1,19 +1,22 @@
 class Solution {
 public:
-    int small(int n){
-        int r;
-        int ans=0;
-        while(n>0){
-            r=n%10;
-            ans=ans+r;
-            n=n/10;
-        }
-        return ans;
-    }
     int smallestIndex(vector<int>& nums) {
         for(int i=0;i<nums.size();i++){
-            if(small(nums[i])==i){
-                return i;
+            if(nums[i]<10){
+                if(nums[i]==i){
+                    return nums[i];
+                }
+            }
+            else{
+                int sum=0;
+                while(nums[i]!=0){
+                    int n=nums[i]%10;
+                    sum=sum+n;
+                    nums[i]=nums[i]/10;
+                }
+                if(sum==i){
+                    return sum;
+                }
             }
         }
         return -1;
